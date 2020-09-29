@@ -1,0 +1,12 @@
+{{yield}}
+<div class="weather-app">
+  <h2>Current Weather</h2>
+  <h4>Refresh Count: {{this.refreshCount}}</h4>
+  <button onclick={{action refreshWeather}}>Refresh</button>
+{{@nameTest}}
+  <address>{{weatherData.city}}, {{weatherData.state}}</address>
+    <button onclick={{action toggleDegrees}}>Change Degrees</button>
+
+  <strong>{{if weatherData degreesToShow  'Loading...'}} {{if isCelsius 'C' 'F'}}</strong>
+</div>
+
